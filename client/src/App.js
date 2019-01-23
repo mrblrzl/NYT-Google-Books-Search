@@ -1,21 +1,25 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+import Nav from "./components/Nav";
 import "./App.css";
+import Jumbotron from "./components/Jumbotron";
+import Form from "./components/Form";
+import Results from "./components/Results";
 
 class App extends Component {
+  state = {
+    books: []
+  }
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Nav />
+        <Jumbotron/>
+        <Form/>
+        <Results />
       </div>
     );
   }
 }
 
 export default App;
+
